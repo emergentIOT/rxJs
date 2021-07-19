@@ -12,4 +12,8 @@ export class PromiseComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  myFunction() {
+    console.log("function called.");
+  }
+
 }
