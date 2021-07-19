@@ -7,13 +7,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './includes/header/header.component';
 import { PromiseComponent } from './promise/promise.component';
+import { TourHeroesComponent } from './tour-heroes/tour-heroes.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    PromiseComponent
+    PromiseComponent,
+    TourHeroesComponent
   ],
   imports: [
     BrowserModule,
