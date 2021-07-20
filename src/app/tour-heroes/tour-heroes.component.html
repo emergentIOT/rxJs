@@ -1,9 +1,19 @@
+<!--
+    - Using attribute from interface
+    - Applying different pipes to attributes
+-->
 <h1>{{hero.id }}</h1>
 <h3>{{hero.name | uppercase}}</h3>
 <p>{{birthday | date }}</p>
 
 <!--
-    TWO WAY BINDING
+    Two way binding
+
+    -[(ngModel)] need to get register in app.module under FormsModule.
 -->
+<div id="twoWayBinding">
+    <label for="name">Hero name: </label>
+    <input id="name" [(ngModel)]="hero.name" placeholder="name">
+</div>
 
 
