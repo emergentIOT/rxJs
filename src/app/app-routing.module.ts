@@ -6,7 +6,7 @@ import { TourHeroesComponent } from './tour-heroes/tour-heroes.component';
 
 
 const routes : Routes = [
-  { path: '**', redirectTo: 'tour'},
+  { path: '**', redirectTo: '/tour'},
   { path: 'promise', component: PromiseComponent},
   { path: 'tour', component: TourHeroesComponent}
 
