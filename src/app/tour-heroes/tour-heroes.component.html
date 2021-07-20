@@ -2,8 +2,10 @@
     - Using attribute from interface
     - Applying different pipes to attributes
 -->
-<h1>{{hero.id }}</h1>
-<h3>{{hero.name | uppercase}}</h3>
+
+<h5>INTERPOLATION EXAMPLE</h5>
+<p>{{hero.id }}</p>
+<p>{{hero.name | uppercase}}</p>
 <p>{{birthday | date }}</p>
 
 <!--
@@ -11,9 +13,21 @@
 
     -[(ngModel)] need to get register in app.module under FormsModule.
 -->
+
+<h5>TWO WAY BINDING EXAMPLE</h5>
 <div id="twoWayBinding">
     <label for="name">Hero name: </label>
     <input id="name" [(ngModel)]="hero.name" placeholder="name">
 </div>
 
+<!--
+    Using *ngFor to display a list 
+-->
+
+<h5>*ngFOR EXAMPLE</h5>
+<ul>
+    <li *ngFor="let heroo of heroes">
+        <span class="badge">{{heroo.id}}</span> {{heroo.name}}
+    </li>
+</ul>
 
