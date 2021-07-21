@@ -11,12 +11,14 @@ import { PromiseComponent } from './promise/promise.component';
 import { TourHeroesComponent } from './tour-heroes/tour-heroes.component';
 import { TourHeroesDetailComponent } from './tour-heroes-detail/tour-heroes-detail.component';
 import { MessagesComponent } from './messages/messages.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 const routes : Routes = [
-  // { path: '**', redirectTo: '/tour'},
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full'},
   // { path: 'promise', component: PromiseComponent},
   { path: 'heroes', component: TourHeroesComponent},
+  { path: 'dashboard', component: DashboardComponent},
   { path: 'promise', component: PromiseComponent}
   // { path: 'tour-detail', component: TourHeroesDetailComponent},
   // { path: 'messages', component: MessagesComponent}
