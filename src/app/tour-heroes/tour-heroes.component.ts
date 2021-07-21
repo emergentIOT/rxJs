@@ -21,7 +21,7 @@ export class TourHeroesComponent implements OnInit {
   //export the dummy data.
   heroes = HEROES;
 
-   //Property to be user with click method
+  //Property to be user with click method
   selectedHero? : Hero;
  
   constructor() { }

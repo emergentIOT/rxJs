@@ -32,15 +32,7 @@
     </li>
 </ul>
 
-<!-- 
-    DIsplay the selected hero section 
-    - *ngIf directive
+<!--
+    Hero detail component
 -->
-<div *ngIf="selectedHero">
-<h2>{{selectedHero.id}} Details</h2>
-<div><span>id: </span>{{selectedHero.id}}</div>
-<div>
-    <label for="hero-name">Hero name: </label>
-    <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
-</div>
-</div>
+<app-tour-heroes-detail [hero]="selectedHero"></app-tour-heroes-detail>

@@ -9,13 +9,15 @@ import { HeaderComponent } from './includes/header/header.component';
 import { PromiseComponent } from './promise/promise.component';
 import { TourHeroesComponent } from './tour-heroes/tour-heroes.component';
 import { FormsModule } from '@angular/forms';
+import { TourHeroesDetailComponent } from './tour-heroes-detail/tour-heroes-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     PromiseComponent,
-    TourHeroesComponent
+    TourHeroesComponent,
+    TourHeroesDetailComponent
   ],
   imports: [
     BrowserModule,
