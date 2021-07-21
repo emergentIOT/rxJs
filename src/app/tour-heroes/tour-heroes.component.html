@@ -27,7 +27,7 @@
 
 <h5>*ngFOR EXAMPLE</h5>
 <ul class="heroes">
-    <li *ngFor="let heroo of heroes" (click)="onSelectHero(heroo)">
+    <li *ngFor="let heroo of heroes" [class.selected]="hero === selectedHero" (click)="onSelectHero(heroo)">
         <span class="badge">{{heroo.id}}</span> {{heroo.name}}
     </li>
 </ul>
