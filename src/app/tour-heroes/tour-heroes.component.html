@@ -21,13 +21,26 @@
 </div>
 
 <!--
-    Using *ngFor to display a list 
+    - Using *ngFor to display a list 
+    - Added the select functionlaity of individual hero
 -->
 
 <h5>*ngFOR EXAMPLE</h5>
-<ul>
-    <li *ngFor="let heroo of heroes">
+<ul class="heroes">
+    <li *ngFor="let heroo of heroes" (click)="onSelectHero(heroo)">
         <span class="badge">{{heroo.id}}</span> {{heroo.name}}
     </li>
 </ul>
 
+<!-- 
+    DIsplay the selected hero section 
+    - *ngIf directive
+-->
+<div *ngIf="selectedHero">
+<h2>{{selectedHero.id}} Details</h2>
+<div><span>id: </span>{{selectedHero.id}}</div>
+<div>
+    <label for="hero-name">Hero name: </label>
+    <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
+</div>
+</div>
