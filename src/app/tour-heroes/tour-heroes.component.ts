@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { HeroService } from '../hero.service';
 import { Hero } from '../interface/Hero'
+import { MessageService } from '../message.service';
 import { HEROES } from '../mock-heroes';
 
 //This specify angular meta data.
@@ -19,20 +21,29 @@ export class TourHeroesComponent implements OnInit {
   }
 
   //export the dummy data.
-  heroes = HEROES;
+  heroes : Hero[] = [];
 
   //Property to be user with click method
   selectedHero? : Hero;
  
-  constructor() { }
+  constructor(private heroService: HeroService,
+    private messageService: MessageService) { }
 
   //This is called shortly after creating the component
   ngOnInit(): void {
+    this.getHeroes();
   }
 
   onSelectHero(hero: Hero) : void {
     this.selectedHero = hero;
-    console.log(this.selectedHero);
+    this.messageService.add(`HeroesCOmponent: Selected hero with id=${hero.id}`)
+    console.log('message service', this.messageService);
+  }
+
+  getHeroes() : void {
+    this.heroService.getHeroes().subscribe(heroes=> {
+      this.heroes = heroes;
+    })
   }
  
 }

@@ -10,6 +10,7 @@ import { PromiseComponent } from './promise/promise.component';
 import { TourHeroesComponent } from './tour-heroes/tour-heroes.component';
 import { FormsModule } from '@angular/forms';
 import { TourHeroesDetailComponent } from './tour-heroes-detail/tour-heroes-detail.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { TourHeroesDetailComponent } from './tour-heroes-detail/tour-heroes-deta
     HeaderComponent,
     PromiseComponent,
     TourHeroesComponent,
-    TourHeroesDetailComponent
+    TourHeroesDetailComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
