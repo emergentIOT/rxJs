@@ -18,6 +18,7 @@ const routes : Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full'},
   // { path: 'promise', component: PromiseComponent},
   { path: 'heroes', component: TourHeroesComponent},
+  { path: 'hero-detail/:id', component: TourHeroesDetailComponent},
   { path: 'dashboard', component: DashboardComponent},
   { path: 'promise', component: PromiseComponent}
   // { path: 'tour-detail', component: TourHeroesDetailComponent},

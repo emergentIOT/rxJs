@@ -18,6 +18,12 @@ export class HeroService {
     return heroes;
   }
 
+  getHero(id: number) : Observable<Hero> {
+    const hero =  HEROES.find(h => h.id === id)!;
+    this.messageService.add(`Hero service: fetched id ${id}`);
+    return of(hero);
+  }
+
   /**
    * The below method is not asynchronours, didnt return any observale
    * Not a good practice in real life application.

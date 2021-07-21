@@ -28,11 +28,10 @@
 <h5>*ngFOR EXAMPLE</h5>
 <ul class="heroes">
     <li *ngFor="let heroo of heroes" [class.selected]="hero === selectedHero" (click)="onSelectHero(heroo)">
-        <span class="badge">{{heroo.id}}</span> {{heroo.name}}
+        <a routerLink="/hero-detail/{{heroo.id}}">
+                    <span class="badge">{{heroo.id}}</span> {{heroo.name}}
+        </a>
+    
     </li>
 </ul>
 
-<!--
-    Hero detail component
--->
-<app-tour-heroes-detail [hero]="selectedHero"></app-tour-heroes-detail>

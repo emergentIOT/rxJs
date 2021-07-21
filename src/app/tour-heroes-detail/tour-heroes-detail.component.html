@@ -2,13 +2,13 @@
     DIsplay the selected hero section 
     - *ngIf directive
 -->
-<h1>TOur detail component</h1>
+<h1>Hero detail</h1>
 <div *ngIf="hero">
-    <h2>{{hero.id}} Details</h2>
     <div><span>id: </span>{{hero.id}}</div>
     <div>
         <label for="hero-name">Hero name: </label>
         <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
     </div>
     </div>
+    <button (click)="goBack()">Go back</button>
 <app-messages></app-messages>
