@@ -24,8 +24,8 @@ import { MessagesComponent } from './messages/messages.component';
   imports: [
     BrowserModule,
     NgbModule,
-    AppRoutingModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
