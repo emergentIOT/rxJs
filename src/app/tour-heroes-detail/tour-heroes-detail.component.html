@@ -4,11 +4,12 @@
 -->
 <h1>Hero detail</h1>
 <div *ngIf="hero">
-    <div><span>id: </span>{{hero.id}}</div>
+    <div><span>id: </span>{{hero.name}}</div>
     <div>
         <label for="hero-name">Hero name: </label>
         <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
     </div>
     </div>
-    <button (click)="goBack()">Go back</button>
-<app-messages></app-messages>
+    <button (click)="goBack()">Go back</button><br><br>
+    <button (click)="save()">Save</button>
+<!-- <app-messages></app-messages> -->

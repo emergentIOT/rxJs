@@ -29,12 +29,21 @@ export class TourHeroesDetailComponent implements OnInit {
     //Get the id from URL, using activatedRoute
     const id = Number(this.activatedRoute.snapshot.paramMap.get('id'));
      this.heroService.getHero(id).subscribe(hero=>{
+     console.log(`Server responded : ${hero.name}`)
      this.hero = hero
    })
   }
 
   goBack() : void {
     this.location.back();
+  }
+
+  save() : void {
+    if(this.hero) {
+      this.heroService.updateHero(this.hero).subscribe( () => {
+        this.goBack();
+      })
+    }
   }
 
   /*

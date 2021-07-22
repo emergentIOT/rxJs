@@ -30,8 +30,17 @@
     <li *ngFor="let heroo of heroes" [class.selected]="hero === selectedHero" (click)="onSelectHero(heroo)">
         <a routerLink="/hero-detail/{{heroo.id}}">
                     <span class="badge">{{heroo.id}}</span> {{heroo.name}}
-        </a>
-    
+        </a><br>
+        <button class="delete" title="delete hero" (click)="delete(heroo)">X</button>
     </li>
 </ul>
 
+<!--add a new Hero-->
+<div>
+    <label for="new-hero">Hero name</label>
+    <input id="new-hero" #heroName />
+
+    <button class="add-button" (click)="add(heroName.value)" heroName.value=''>
+        Add hero
+    </button>
+</div>

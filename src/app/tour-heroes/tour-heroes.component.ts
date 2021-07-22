@@ -40,11 +40,27 @@ export class TourHeroesComponent implements OnInit {
     console.log('message service', this.messageService);
   }
 
+  //Get List of Heroes
   getHeroes() : void {
     this.heroService.getHeroes().subscribe(heroes=> {
       console.log("console", heroes);
       this.heroes = heroes;
     })
+  }
+
+  //Add new hero
+  add(name: string): void {
+    name = name.trim();
+    if(!name) return;
+    this.heroService.addHero({name} as Hero).subscribe( hero => 
+      this.heroes.push(hero));
+  }
+
+  //Delete a Hero
+  delete(hero: Hero) : void {
+    console.log("id",hero.id);
+    this.heroService.deleteHero(hero.id).subscribe();
+    console.log("Hero left", this.heroes);
   }
  
 }
