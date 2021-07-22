@@ -42,6 +42,7 @@ export class TourHeroesComponent implements OnInit {
 
   getHeroes() : void {
     this.heroService.getHeroes().subscribe(heroes=> {
+      console.log("console", heroes);
       this.heroes = heroes;
     })
   }
