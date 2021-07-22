@@ -60,7 +60,7 @@ export class TourHeroesComponent implements OnInit {
   delete(hero: Hero) : void {
     console.log("id",hero.id);
     this.heroService.deleteHero(hero.id).subscribe();
-    console.log("Hero left", this.heroes);
+    console.log("Hero", this.heroes);
   }
  
 }
